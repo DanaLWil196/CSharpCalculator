@@ -169,5 +169,97 @@ namespace CSharpCalculator
                 txtDisplay.Text = number2.ToString();
             }
         }
+
+        private void btnPlus_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "+";
+            txtDisplay.Text = "0";
+        }
+
+        private void btnMinus_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "-";
+            txtDisplay.Text = "0";
+        }
+
+        private void btnTimes_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "*";
+            txtDisplay.Text = "0";
+        }
+
+        private void btnDivide_Click(object sender, RoutedEventArgs e)
+        {
+            operation = "/";
+            txtDisplay.Text = "0";
+        }
+
+        private void btnEquals_Click(object sender, RoutedEventArgs e)
+        {
+            switch (operation)
+            {
+                case "+":
+                    txtDisplay.Text = (number1 + number2).ToString();
+                    break;
+                case "-":
+                    txtDisplay.Text = (number1 - number2).ToString();
+                    break;
+                case "*":
+                    txtDisplay.Text = (number1 * number2).ToString();
+                    break;
+                case "/":
+                    txtDisplay.Text = (number1 / number2).ToString();
+                    break;
+            }
+        }
+
+        private void btnClearEntry_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                number1 = 0;
+            }
+            else
+            {
+                number2 = 0;
+            }
+            txtDisplay.Text = "0";
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            number1 = 0;
+            number2 = 0;
+            operation = "";
+            txtDisplay.Text = "0";
+        }
+
+        private void btnBackspace_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                number1 = (number1 / 10);
+                txtDisplay.Text = number1.ToString();
+            }
+            else
+            {
+                number2 = (number2 / 10);
+                txtDisplay.Text = number2.ToString();
+            }
+        }
+
+        private void btnPositiveNegative_Click(object sender, RoutedEventArgs e)
+        {
+            if (operation == "")
+            {
+                number1 *= -1;
+                txtDisplay.Text = number1.ToString();
+            }
+            else
+            {
+                number2 *= -1;
+                txtDisplay.Text = number2.ToString();
+            }
+        }
     }
 }
