@@ -32,7 +32,7 @@
         <Button x:Name="btn6" Grid.Row="3" Grid.Column="2" Click="btn6_Click">6</Button>
         <Button x:Name="btn1" Grid.Row="4" Grid.Column="0" Click="btn1_Click">1</Button>
         <Button x:Name="btn2" Grid.Row="4" Grid.Column="1" Click="btn2_Click">2</Button>
-        <Button x:Name="btn3" Grid.Row="4" Grid.Column="2" Height="66" VerticalAlignment="Top" Click="btn3_Click">3</Button>
+        <Button x:Name="btn3" Grid.Row="4" Grid.Column="2" Click="btn3_Click">3</Button>
         <Button x:Name="btn0" Grid.Row="5" Grid.Column="1" Click="btn0_Click">0</Button>
         
         <!--Maths Buttons-->
